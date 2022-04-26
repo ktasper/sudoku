@@ -36,6 +36,6 @@ run:
 	pipenv run python main.py
 
 .PHONEY: run
-## Run the app 
-run: test
+## Run the app
+run:  test
 	pipenv run python main.py
