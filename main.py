@@ -1,14 +1,23 @@
 import puzzle.parsers as parsers
 import puzzle.printer as printer
-
+import puzzle.solver as solver
+from halo import Halo
 
 def main():
     """
     Main function, runs the program.
     """
-    puzzle_string = ".7..39.52...5...9.......6.7.1.94..2.3..6....5..9.23.16.3.........2......74..1...."
+    puzzle_string = "..9...3.....5.9...4.......29..6.8..783.4.2.51.5.....6.5...9...4..2.1.7..........."
     # Generate a puzzle
-    printer.print_board(parsers.type_one_line(puzzle_string))
+    board = parsers.type_one_line(puzzle_string)
+    print("Puzzle:")
+    printer.print_board(board)
+    print(" ")
+    spinner = Halo(text='Solving Puzzle',spinner='dots',color='blue')
+    spinner.start()
+    solver.solve(board)
+    spinner.succeed('Sovled!')
+    printer.print_board(board)
 
 
 
