@@ -1,5 +1,5 @@
 # Sudoku
-A sudoku solver and generator.
+A sudoku solver
 
 ## Sudoku
 
